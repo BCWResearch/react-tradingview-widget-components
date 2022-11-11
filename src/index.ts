@@ -1,1 +1,1 @@
-export { SymbolOverview } from "widgets/SymbolOverview";
+export * from "./widgets/SymbolOverview";

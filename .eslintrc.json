@@ -1,8 +1,12 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
+    "ignorePatterns": [
+        "dist/"
+    ],
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
@@ -19,6 +23,11 @@
         "react",
         "@typescript-eslint"
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "rules": {
         "indent": [
             "error",
@@ -39,6 +48,20 @@
         "object-curly-spacing": [
             "warn",
             "always"
-        ]
+        ],
+        "object-curly-newline": [
+            "warn",
+            {
+                "ObjectExpression": "always",
+                "ObjectPattern": { "multiline": true },
+                "ImportDeclaration": { "multiline": true, "minProperties": 2},
+                "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+            }
+        ],
+        "array-bracket-spacing": [
+            "warn",
+            "always"
+        ],
+        "react/react-in-jsx-scope": "off"
     }
 }
