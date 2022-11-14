@@ -1,6 +1,6 @@
 {
   "name": "react-tradingview-widget-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple, customizable wrapper for TradingView widgets",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepublish": "rollup -c",
+    "prepublish": "rm -rf dist && npm run test && rollup -c",
     "build": "rollup -c",
     "watch": "rollup -c -w"
   },
@@ -24,7 +24,7 @@
     "crypto"
   ],
   "author": "john-bcw",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BCWResearch/react-tradingview-widget/issues"
   },
