@@ -6,10 +6,7 @@ export default {
 		dir: "dist",
 		format: "esm"
 	},
-	external: [
-		"react",
-		"react/jsx-runtime"
-	],
+	external: [ "react" ],
 	plugins: [ typescript({
 		exclude: [ "**/*.test.*" ] 
 	}) ],

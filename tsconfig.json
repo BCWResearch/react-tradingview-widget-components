@@ -7,7 +7,7 @@
       "ESNext",
       "ES6"
     ],
-    "jsx": "react-jsx",
+    "jsx": "react",
     "module": "ESNext",
     "rootDir": "./src",
     "moduleResolution": "node",
