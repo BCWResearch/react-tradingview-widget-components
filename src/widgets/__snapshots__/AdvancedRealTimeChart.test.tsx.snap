@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containing div id should be the same on rerender 1`] = `
+<div>
+  <div>
+    <div
+      id="mockedId"
+    >
+      WIDGET
+    </div>
+  </div>
+</div>
+`;
+
+exports[`containing div id should be the same on rerender 2`] = `
+<div>
+  <div>
+    <div
+      id="mockedId"
+    >
+      WIDGET
+    </div>
+  </div>
+</div>
+`;

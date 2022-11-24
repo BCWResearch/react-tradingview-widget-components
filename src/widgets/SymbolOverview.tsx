@@ -6,6 +6,7 @@ import { getId } from "../utils/widgetUtils";
 import {
 	ChartType, MediumWidgetProps, ValuesTracking 
 } from "../types/SymbolOverviewProps";
+import useIsMounted from "../utils/useIsMounted";
 
 const chartTypeDefaultValues: Record<ChartType, Record<string, string | number>> = {
 	bars: {
@@ -33,6 +34,7 @@ const chartTypeDefaultValues: Record<ChartType, Record<string, string | number>>
 
 export const SymbolOverview = React.forwardRef<HTMLDivElement, Partial<MediumWidgetProps & {fallback: React.ReactNode}>>(function SymbolOverviewRoot({ fallback, containerStyles, ...props }, ref) {
 	const idRef = useRef(getId());
+	const isMounted = useIsMounted();
 	const [ isError, setIsError ] = useState(false);
 
 	useEffect(() => {
@@ -63,16 +65,16 @@ export const SymbolOverview = React.forwardRef<HTMLDivElement, Partial<MediumWid
 				const node = document.querySelector("iframe[id^=\"tradingview_\"]");
 				// enables iframe transparency
 				if (node && node instanceof HTMLElement) node.style.colorScheme = "normal";
-				if (isError) setIsError(false);
+				if (isMounted()) setIsError(false);
 			} catch (error) {
-				setIsError(true);
+				if (isMounted()) setIsError(true);
 			}
 		})();
 	}, [ JSON.stringify(props) ]);
 
 	return (
 		<div style={containerStyles} ref={ref}>
-			<div id={idRef.current}>{isError && fallback}</div>
+			<div id={idRef.current}>{isError && fallback ? fallback : null}</div>
 		</div>
 	);
 });
