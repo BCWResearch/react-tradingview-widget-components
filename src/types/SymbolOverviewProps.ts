@@ -20,7 +20,7 @@ export interface MediumWidgetBaseOptions {
     fontColor: CSSProperties["color"];
     widgetFontColor: CSSProperties["color"];
     hideLogo: boolean;
-    valuesTracking: "0" | "1" | "2" | "3";
+    valuesTracking: ValuesTracking;
     volumeUpColor: CSSProperties["color"];
     volumeDownColor: CSSProperties["color"];
     noTimeScale: boolean;

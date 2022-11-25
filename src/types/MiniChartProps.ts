@@ -22,6 +22,7 @@ export interface MiniChartBaseProps {
 	bottomGradientColor: CSSProperties["color"],
 	isTransparent: boolean,
 	autosize: boolean,
+	chartOnly: boolean,
 	largeChartUrl: string,
 }
 
