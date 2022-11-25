@@ -1,6 +1,6 @@
 {
   "name": "react-tradingview-widget-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple, customizable wrapper for TradingView widgets",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -4,7 +4,7 @@ import React, {
 } from "react";
 import {
 	AdvancedChartBarStyle, AdvancedRealTimeChartProps 
-} from "../types/AdvancedRealTimeChart";
+} from "../types/AdvancedRealTimeChartProps";
 import { injectTradingView } from "../utils/injectTradingView";
 import useIsMounted from "../utils/useIsMounted";
 import { getId } from "../utils/widgetUtils";

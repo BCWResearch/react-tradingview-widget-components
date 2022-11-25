@@ -18,8 +18,10 @@ export const App () => {
 
 ### Widget Props Documentation
 - [Symbol Overview](/src/types/SymbolOverviewProps.ts)
-- [Advanced Real-Time Chart](/src/types/AdvancedRealTimeChart.ts)
+- [Advanced Real-Time Chart](/src/types/AdvancedRealTimeChartProps.ts)
+- [Mini Chart](/src/types/MiniChartProps.ts)
 
 ## Supported Widgets
 - Symbol Overview
 - Advanced Real-Time Chart
+- Mini Chart

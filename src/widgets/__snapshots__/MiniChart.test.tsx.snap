@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render without crashing 1`] = `
+<div>
+  <div
+    class="tradingview-widget-container"
+  >
+    <script
+      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+      type="text/javascript"
+    >
+      {"width":350,"height":220,"dateRange":"1D","colorTheme":"dark","trendLineColor":"rgba(41, 98, 255, 1)","underLineColor":"rgba(41, 98, 255, 0.3)","underLineBottomColor":"rgba(41, 98, 255, 0)","isTransparent":true}
+    </script>
+  </div>
+</div>
+`;
